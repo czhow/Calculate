@@ -148,11 +148,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         clear_flag=true;
         double result=0;
-
         String s1=exp.substring(0,exp.indexOf(" "));
-
         String op=exp.substring(exp.indexOf(" ")+1,exp.indexOf(" ")+2);
-
         String s2=exp.substring(exp.indexOf(" ")+3);
         if(!s1.equals(" ")&&!s2.equals(" ")){
             double d1=Double.parseDouble(s1);
