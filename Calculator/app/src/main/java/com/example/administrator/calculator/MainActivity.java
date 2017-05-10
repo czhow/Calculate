@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//获取各个buttom的实例
+
         btn_0=(Button)findViewById(R.id.but_0);
         btn_1=(Button)findViewById(R.id.but_1);
         btn_2=(Button)findViewById(R.id.but_2);
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         et_input=(EditText)findViewById(R.id.et_input);
-//加载监听
+
         btn_0.setOnClickListener(this);
         btn_1.setOnClickListener(this);
         btn_2.setOnClickListener(this);
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
-    //单独来运算最后的结果
+
     private void getResult(){
         String exp=et_input.getText().toString();
         if(exp==null||exp.equals("")){
@@ -148,11 +148,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         clear_flag=true;
         double result=0;
-        //截取运算符前面的字符串
+
         String s1=exp.substring(0,exp.indexOf(" "));
-        //截取运算符
+
         String op=exp.substring(exp.indexOf(" ")+1,exp.indexOf(" ")+2);
-        //截取运算符后面的字符串
+
         String s2=exp.substring(exp.indexOf(" ")+3);
         if(!s1.equals(" ")&&!s2.equals(" ")){
             double d1=Double.parseDouble(s1);
